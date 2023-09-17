@@ -1,0 +1,41 @@
+﻿<Page x:Class="CrimeRecordManagement.Pages.EvidencesDatabase"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CrimeRecordManagement.Pages"
+      xmlns:EVTable="clr-namespace:CrimeRecordManagement.views"
+      mc:Ignorable="d" 
+      Title="Evidences Database">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*"></RowDefinition>
+            <!-- main photo -->
+            <RowDefinition Height=".10*"></RowDefinition>
+            <!-- current master -->
+            <RowDefinition Height=".05*"></RowDefinition>
+            <!-- table actions -->
+            <RowDefinition Height=".70*"></RowDefinition>
+            <!-- table -->
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Image Source="/maxresdefault(1).jpg"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock TextAlignment="Center" Text="Evidences Master" FontWeight="Bold" FontSize="15"/>
+        </StackPanel>
+
+        <StackPanel x:Name="table_actions" Grid.Row="2" Margin="0, 0, 0, 10" Orientation="Horizontal">
+            <Button x:Name="search_button" Content="Search" Width="100"></Button>
+            <TextBox x:Name="search_input" Width="200"/>
+            <Button x:Name="insert_button" Content="Insert" Width="100" Margin="20,0,0,0"></Button>
+            <Button x:Name="delete_button" Content="Delete Selected" Width="100" Margin="20,0,0,0"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3">
+            <EVTable:EvidencesTable/>
+        </StackPanel>
+    </Grid>
+</Page>

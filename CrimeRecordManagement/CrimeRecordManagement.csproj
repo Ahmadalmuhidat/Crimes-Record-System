@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="maxresdefault%281%29.jpg" />
+    <None Remove="Pages\person.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="maxresdefault(1).jpg" />
+    <Resource Include="Pages\person.jpg" />
+  </ItemGroup>
+
+</Project>
